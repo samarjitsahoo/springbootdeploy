@@ -11,7 +11,7 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 
 # Copy the build artifact from the build stage
-COPY --from=build /target/springbootdeploy-0.0.1-SNAPSHOT.jar springbootdeploy.jar
+COPY --from=build /target/SpringBootDeploy-0.0.1-SNAPSHOT.jar springbootdeploy.jar
 
 # Run the application
 EXPOSE 8080
